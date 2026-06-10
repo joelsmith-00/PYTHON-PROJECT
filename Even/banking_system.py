@@ -1,4 +1,4 @@
-PIN = "1234"
+PIN = input("Set your 4-digit PIN: ")
 
 entered_pin = input("Enter your 4-digit PIN: ")
 
