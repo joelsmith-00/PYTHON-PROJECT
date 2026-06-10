@@ -32,6 +32,8 @@ while True:
         amount = float(input("Enter deposit amount: ₹"))
         balance += amount
         transactions.append(f"Deposited ₹{amount}")
+        with open("transactions.txt", "a") as file:
+         file.write(f"Deposited ₹{amount}\n")
         print(f"₹{amount} deposited successfully!")
 
     elif choice == "3":
@@ -40,6 +42,8 @@ while True:
         if amount <= balance:
             balance -= amount
             transactions.append(f"Withdrawn ₹{amount}")
+            with open("transactions.txt", "a") as file:
+             file.write(f"Withdrawn ₹{amount}\n")
             print(f"₹{amount} withdrawn successfully!")
         else:
             print("Insufficient balance!")
@@ -51,6 +55,8 @@ while True:
         if amount <= balance:
             balance -= amount
             transactions.append(f"Transferred ₹{amount} to {receiver}")
+            with open("transactions.txt", "a") as file:
+             file.write(f"Transferred ₹{amount} to {receiver}\n")
             print("Transfer Successful!")
         else:
             print("Insufficient Balance!")
