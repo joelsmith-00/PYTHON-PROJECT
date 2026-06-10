@@ -1,11 +1,13 @@
 balance = 1000
+transactions = []
 
 while True:
     print("\n===== BANKING SYSTEM =====")
     print("1. Check Balance")
     print("2. Deposit Money")
     print("3. Withdraw Money")
-    print("4. Exit")
+    print("4. View Transactions")
+    print("5. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -15,6 +17,7 @@ while True:
     elif choice == "2":
         amount = float(input("Enter deposit amount: ₹"))
         balance += amount
+        transactions.append(f"Deposited ₹{amount}")
         print(f"₹{amount} deposited successfully!")
 
     elif choice == "3":
@@ -22,11 +25,20 @@ while True:
 
         if amount <= balance:
             balance -= amount
+            transactions.append(f"Withdrawn ₹{amount}")
             print(f"₹{amount} withdrawn successfully!")
         else:
             print("Insufficient balance!")
 
     elif choice == "4":
+        print("\nTransaction History")
+        if len(transactions) == 0:
+            print("No transactions found.")
+        else:
+            for t in transactions:
+                print(t)
+
+    elif choice == "5":
         print("Thank you for using our bank.")
         break
 
