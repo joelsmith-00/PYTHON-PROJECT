@@ -24,7 +24,8 @@ while True:
     print("3. Withdraw Money")
     print("4. Transfer Money")
     print("5. View Transactions")
-    print("6. Exit")
+    print("6. Calculate Interest")
+    print("7. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -72,10 +73,13 @@ while True:
         else:
             for t in transactions:
                 print(t)
-
     elif choice == "6":
-        print("Thank you for using our bank.")
-        break
+       interest = balance * 0.05
+       print(f"Estimated Interest: ₹{interest}")
 
-    else:
-        print("Invalid choice!")
+    elif choice == "7":
+      print("Thank you for using our bank.")
+    break
+
+else:
+    print("Invalid choice!")
