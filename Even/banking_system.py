@@ -8,6 +8,10 @@ if entered_pin != PIN:
 
 print("Login Successful!")
 
+account_holder = "Joel Smith"
+
+print(f"\nWelcome {account_holder}")
+
 balance = 1000
 
 balance = 1000
