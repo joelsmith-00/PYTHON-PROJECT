@@ -9,10 +9,7 @@ if entered_pin != PIN:
 print("Login Successful!")
 
 account_holder = "Joel Smith"
-
 print(f"\nWelcome {account_holder}")
-
-balance = 1000
 
 balance = 1000
 transactions = []
@@ -22,8 +19,9 @@ while True:
     print("1. Check Balance")
     print("2. Deposit Money")
     print("3. Withdraw Money")
-    print("4. View Transactions")
-    print("5. Exit")
+    print("4. Transfer Money")
+    print("5. View Transactions")
+    print("6. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -47,14 +45,26 @@ while True:
             print("Insufficient balance!")
 
     elif choice == "4":
+        receiver = input("Enter receiver name: ")
+        amount = float(input("Enter amount: ₹"))
+
+        if amount <= balance:
+            balance -= amount
+            transactions.append(f"Transferred ₹{amount} to {receiver}")
+            print("Transfer Successful!")
+        else:
+            print("Insufficient Balance!")
+
+    elif choice == "5":
         print("\nTransaction History")
+
         if len(transactions) == 0:
             print("No transactions found.")
         else:
             for t in transactions:
                 print(t)
 
-    elif choice == "5":
+    elif choice == "6":
         print("Thank you for using our bank.")
         break
 
