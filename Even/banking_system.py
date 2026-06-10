@@ -65,7 +65,7 @@ while True:
             print("Insufficient Balance!")
 
     elif choice == "5":
-        print("\nTransaction History")
+        print(f"Total Transactions: {len(transactions)}")
 
         if len(transactions) == 0:
             print("No transactions found.")
