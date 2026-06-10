@@ -1,3 +1,15 @@
+PIN = "1234"
+
+entered_pin = input("Enter your 4-digit PIN: ")
+
+if entered_pin != PIN:
+    print("Incorrect PIN!")
+    exit()
+
+print("Login Successful!")
+
+balance = 1000
+
 balance = 1000
 transactions = []
 
