@@ -8,8 +8,11 @@ if entered_pin != PIN:
 
 print("Login Successful!")
 
-account_holder = "Joel Smith"
-print(f"\nWelcome {account_holder}")
+aaccount_holder = "Joel Smith"
+account_number = "ACC1001"
+
+print(f"\nWelcome {aaccount_holder}")
+print(f"Account Number: {account_number}")
 
 balance = 1000
 transactions = []
