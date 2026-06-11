@@ -16,6 +16,7 @@ while True:
         print("Item Added!")
 
     elif choice == "2":
+     print(f"Total Products: {len(items)}")
      for item, quantity in items.items():
         print(f"{item}: {quantity}")
 
