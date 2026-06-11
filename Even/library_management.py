@@ -4,7 +4,8 @@ while True:
     print("\n===== LIBRARY MANAGEMENT =====")
     print("1. Add Book")
     print("2. View Books")
-    print("3. Exit")
+    print("3. Search Book")
+    print("4. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -22,6 +23,16 @@ while True:
                 print(book)
 
     elif choice == "3":
+        search_term = input("Enter book name to search: ")
+        found_books = [book for book in books if search_term.lower() in book.lower()]
+        if found_books:
+            print("\nFound Books:")
+            for book in found_books:
+                print(book)
+        else:
+            print("Book not found.")
+
+    elif choice == "4":
         print("Thank you!")
         break
 
