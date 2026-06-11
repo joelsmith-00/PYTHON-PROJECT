@@ -4,7 +4,8 @@ while True:
     print("\n===== INVENTORY MANAGEMENT =====")
     print("1. Add Item")
     print("2. View Inventory")
-    print("3. Exit")
+    print("3. Search Item")
+    print("4. Exit")
 
     choice = input("Enter choice: ")
 
@@ -19,6 +20,13 @@ while True:
             print(f"{item}: {quantity}")
 
     elif choice == "3":
+        search_item = input("Enter item name to search: ")
+        if search_item in items:
+            print(f"{search_item}: {items[search_item]}")
+        else:
+            print("Item not found.")
+
+    elif choice == "4":
         break
 
     else:
