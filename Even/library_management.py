@@ -5,7 +5,8 @@ while True:
     print("1. Add Book")
     print("2. View Books")
     print("3. Search Book")
-    print("4. Exit")
+    print("4. Delete Book")
+    print("5. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -33,6 +34,14 @@ while True:
             print("Book not found.")
 
     elif choice == "4":
+        book_to_delete = input("Enter book name to delete: ")
+        if book_to_delete in books:
+            books.remove(book_to_delete)
+            print("Book deleted successfully!")
+        else:
+            print("Book not found.")
+
+    elif choice == "5":
         print("Thank you!")
         break
 
