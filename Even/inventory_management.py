@@ -16,8 +16,11 @@ while True:
         print("Item Added!")
 
     elif choice == "2":
-        for item, quantity in items.items():
-            print(f"{item}: {quantity}")
+     for item, quantity in items.items():
+        print(f"{item}: {quantity}")
+
+        if quantity < 5:
+            print("⚠ Low Stock")
 
     elif choice == "3":
         search_item = input("Enter item name to search: ")
@@ -37,4 +40,4 @@ while True:
     else:
         print("Item not found")
 
-    e
+    
