@@ -12,13 +12,16 @@ while True:
 
     if choice == "1":
         book = input("Enter book name: ")
-        books.append(book)
+        author = input("Enter author name: ")
+
+        books.append(f"{book} - {author}")
         print("Book added successfully!")
 
     elif choice == "2":
         if len(books) == 0:
             print("No books available.")
         else:
+            print(f"Total Books: {len(books)}")
             print("\nBooks in Library:")
             for book in books:
                 print(book)
