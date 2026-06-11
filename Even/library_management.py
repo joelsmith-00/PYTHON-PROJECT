@@ -17,10 +17,11 @@ while True:
     if choice == "1":
         book = input("Enter book name: ")
         author = input("Enter author name: ")
+        category = input("Enter category: ")
 
-        books.append(f"{book} - {author}")
+        books.append(f"{book} - {author} - {category}")
         with open("books.txt", "a") as file:
-         file.write(f"{book} - {author}\n")
+            file.write(f"{book} - {author} - {category}\n")
         print("Book added successfully!")
 
     elif choice == "2":
