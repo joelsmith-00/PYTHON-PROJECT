@@ -19,6 +19,8 @@ while True:
         author = input("Enter author name: ")
 
         books.append(f"{book} - {author}")
+        with open("books.txt", "a") as file:
+         file.write(f"{book} - {author}\n")
         print("Book added successfully!")
 
     elif choice == "2":
