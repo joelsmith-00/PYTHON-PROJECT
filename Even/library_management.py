@@ -12,6 +12,7 @@ while True:
     print("4. Delete Book")
     print("5. Return Book")
     print("6. Exit")
+    print(f"Total Books Available: {len(books)}")
     print("7. Exit")
 
     choice = input("Enter your choice: ")
