@@ -28,6 +28,13 @@ while True:
 
     elif choice == "4":
         break
+    elif choice == "4":
+     delete_item = input("Enter item name: ")
 
+    if delete_item in items:
+        del items[delete_item]
+        print("Item deleted")
     else:
-        print("Invalid Choice")
+        print("Item not found")
+
+    e
