@@ -10,7 +10,9 @@ while True:
     print("2. View Books")
     print("3. Search Book")
     print("4. Delete Book")
-    print("5. Exit")
+    print("5. Return Book")
+    print("6. Exit")
+    print("7. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -55,5 +57,13 @@ while True:
         print("Thank you!")
         break
 
-    else:
-        print("Invalid choice!")
+    elif choice == "6":
+        print("Thank you!")
+        break
+   
+    elif choice == "7":
+     return_book = input("Enter book name to return: ")
+    print(f"{return_book} returned successfully!")
+
+else:
+    print("Invalid choice!")
