@@ -5,7 +5,8 @@ while True:
     print("1. Add Employee")
     print("2. View Employees")
     print("3. Search Employee")
-    print("4. Exit")
+    print("4. Delete Employee")
+    print("5. Exit")
 
     choice = input("Enter choice: ")
 
@@ -31,6 +32,14 @@ while True:
             print("Employee not found.")
 
     elif choice == "4":
+        emp_id = input("Enter Employee ID to delete: ")
+        if emp_id in employees:
+            del employees[emp_id]
+            print("Employee Deleted!")
+        else:
+            print("Employee not found.")
+
+    elif choice == "5":
         print("Goodbye!")
         break
 
