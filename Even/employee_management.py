@@ -4,7 +4,8 @@ while True:
     print("\n===== EMPLOYEE MANAGEMENT =====")
     print("1. Add Employee")
     print("2. View Employees")
-    print("3. Exit")
+    print("3. Search Employee")
+    print("4. Exit")
 
     choice = input("Enter choice: ")
 
@@ -23,6 +24,13 @@ while True:
                 print(f"{emp_id} : {name}")
 
     elif choice == "3":
+        emp_id = input("Enter Employee ID to search: ")
+        if emp_id in employees:
+            print(f"Employee Found: {emp_id} : {employees[emp_id]}")
+        else:
+            print("Employee not found.")
+
+    elif choice == "4":
         print("Goodbye!")
         break
 
